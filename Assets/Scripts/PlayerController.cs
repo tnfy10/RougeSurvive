@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Walk", true);
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                moveSpeed = 6f;
+                moveSpeed = 4.5f;
             }
             else
             {
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         transform.Translate(0, 0, vertical);
         
-        if (killCount >= 10 && !fiverMode)
+        if (killCount >= 30 && !fiverMode)
         {
             killCount = 0;
             fiverMode = true;

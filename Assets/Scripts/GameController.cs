@@ -17,11 +17,12 @@ public class GameController : MonoBehaviour
     
     private float readySecond = 1.0f;
     private float repeatSecond = 0.1f;
-    private int hp = 10000;
-    private float totalHP = 10000.0f;
-    private int damage = 10;
+    private int hp = 2000;
+    private float totalHP = 2000.0f;
+    private int damage = 30;
     private double score;
     public int mobCount;
+    private int totalMobCount = 300;
 
     void Start()
     {
@@ -59,27 +60,27 @@ public class GameController : MonoBehaviour
         if (score >= 500)
         {
             score += 1.5;
-            damage = 20;
+            damage = 50;
         }
         else if (score >= 1000)
         {
             score += 1.7;
-            damage = 40;
+            damage = 70;
         }
         else if (score >= 3000)
         {
             score += 2.0;
-            damage = 60;
+            damage = 100;
         }
         else if (score >= 5000)
         {
             score += 2.5;
-            damage = 80;
+            damage = 130;
         }
         else if (score >= 7000)
         {
             score += 3.0;
-            damage = 100;
+            damage = 150;
         }
         else
         {
@@ -92,7 +93,7 @@ public class GameController : MonoBehaviour
         float posX = Random.Range(0f, 100.0f);
         float posZ = Random.Range(0f, 100.0f);
 
-        if (mobCount <= 500)
+        if (mobCount <= totalMobCount)
         {
             GameObject slime = Instantiate(slimePrefab, new Vector3(posX, 0, posZ), Quaternion.identity);
             mobCount++;
@@ -104,7 +105,7 @@ public class GameController : MonoBehaviour
         float posX = Random.Range(0f, 100.0f);
         float posZ = Random.Range(0f, 100.0f);
 
-        if (mobCount <= 500)
+        if (mobCount <= totalMobCount)
         {
             GameObject turtleShell = Instantiate(turtleShellPrefab, new Vector3(posX, 0, posZ), Quaternion.identity);
             mobCount++;

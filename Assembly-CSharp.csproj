@@ -58,8 +58,9 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\MobController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\AudioPlayer.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\AudioPlayer.cs" />
+     <Compile Include="Assets\Scripts\ScreenController.cs" />
      <None Include="Assets\AddOns\Mg3D_Food\Food_ReadMe.txt" />
      <None Include="Assets\8K Skybox Pack Free\ReadMe.txt" />
  <Reference Include="UnityEngine">
